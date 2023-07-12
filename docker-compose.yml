@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  auto-abrigate:
+    image: auto-abrigate:latest
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    # ports:
+    #   - '27010:27017'
+    volumes:
+      - './input/:/root/input'
+      - './processed/:/root/processed'
+      - './output/:/root/output'
